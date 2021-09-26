@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             }
             
             do {
-                let courses = try JSONDecoder().decode(Cat.self, from: data)
+                let courses = try JSONDecoder().decode([Cat].self, from: data)
                 print(courses)
                 guard let image = UIImage(data: data) else { return }
                 DispatchQueue.main.async {
